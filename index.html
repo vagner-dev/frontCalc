@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caculadora para medicamentos</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="index.css">
+  <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
+</head>
+<body class="body" id="body">
+  <header class="classMain">
+    <section class="container">
+      <nav class="navbar">
+        <input type="checkbox" id="check-box">
+        <label for="check-box" class="checkbox">
+          <i class="fa fa-bars"></i>
+        </label>
+
+
+        <ul class="navbar-ul">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Calculadora</a></li>
+          <li><a class="exit" href="#">Sair</a></li>
+        </ul>
+      </nav>
+
+    </section>
+
+  </header>
+  <main class="main">
+    <div class="container-main">
+      <h1>Calculadora</h1>
+      <p>Preencha todos os campos</p>
+      <form class="form" id="form">
+        <input type="text" id="prescribed" placeholder="Informe o valor prescrito pelo médico!" required>
+        <select required id="medicine">
+          <option value="" disabled selected hidden>Selecione o medicamento</option>
+        </select>
+        <select required id="adm">
+          <option value="" disabled selected hidden>Selecione a forma de administração</option>
+          <option value="intravenoso">intravenoso</option>
+          <option value="intramuscular">intramuscular</option>
+
+        </select>
+        <select required id="brand">
+          <option value="" disabled selected hidden>Selecione a marca do medicamento</option>
+        </select>
+        <select required id="presentation">
+          <option value="" disabled selected hidden>Selecione a apresentação</option>
+          <option value="500mg FR/AMP">500mg FR/AMP</option>
+          <option value="1000mg FR/AMP">1000mg FR/AMP</option>
+        </select>
+        <button type="submit" class="btn-calc" id="btn-calc">Calcular</button>
+      </form>
+      <div class="message" id="init">
+        <p>Resultado Final: 5,34ml</p>
+        <p>É necessario adicionar a permeabilização ao resultado</p>
+        <button type="submit" class="btn-calc" id="btn-result">Ok</button>
+      </div>
+      <div class="full-screen" id="full">
+      </div>
+    </div>
+
+  </main>
+  <script type="module"src= "src/main.js"></script>
+
+</body>
+
+</html>
